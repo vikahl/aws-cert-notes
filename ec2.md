@@ -48,3 +48,31 @@ Not required for this certificate, but useful to know.
 - Multiple security groups can be assigned to a specific instance.
 - All inbound traffic is blocked by default. All outbound traffic is allowed by default.
 - Rules can allow, but not deny, nor block specific ip addresses (instead use network access control lists)
+
+## Placement group
+
+- Clustered placement group
+  - Groupment of instances within a _single_ AZ
+  - Recommended for applicatinos that needs low network latency or high network throughput (or both)
+  - Only certain instances can be launched into clustered placement group
+- Spread placement group
+  - Each instance is placed on a distinct hardware
+  - Recommended for applications that have a small number of critical instances
+  - Can span multiple AZ
+- AWS recommends homogenous instances within placement groups
+- Placement groups can be merged
+- Existing instances can't be moved into a placement group. Instead, create an AMI from an existing instance and launch a new instance from the AMI into the group.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
