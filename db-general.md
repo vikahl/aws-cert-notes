@@ -20,7 +20,7 @@ Two key features
   - No automatic fail-over, the dns needs to be updated manually
     Half the EC2 instances can point to the read replica and the other to the primary to increase performance
   - Can have 5 read replicas for a database (and read replicas of read replicas, but that might increase latency)
-  - Automatic backups must be turend on
+  - Automatic backups must be turned on
   - Read replicas can have Multi-AZ turned on
   - Can be promoted to their own database (breaks replication)
   - Can exist in another region from the primary
@@ -32,6 +32,7 @@ Two key features
 - DynamoDB (Amazons NoSQL solution)
   - supports both documents and key-value
   - stored on ssd across three geographical distinc data centers (both speed and redundancy)
+  - database is partitioned across a number of nodes, each responsible for a defined block of data (in SQL syntax it's called sharding)
   - two consistency models
     - eventual consistent read (default)  
       consistency is usually reached within a second, best read performance
@@ -42,8 +43,8 @@ Two key features
 
 - Redshift, data warehousing
 - Elasticache, an in-memory cache
-  - In memory cache with Memcached or Redis 
-  - Memcached, scales horizontally, multi-threaded, no persistance, no backup/restore
+  - In memory cache with Memcached or Redis
+  - Memcached, scales horizontally, multi-threaded, no persistence, no backup/restore
   - Redis, advanced data types, pub/sub, persistence, backup/restore, multi-AZ
 
 ## Backups
@@ -66,4 +67,3 @@ Two types of backups
 
 - Encryption at rest is supported for MySQL, Oracle, SQL server, PostgreSQL, MariaDB and Aurora.
 - With encryption turned on, everything will be encrypted (backups, snapshots, …)
-

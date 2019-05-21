@@ -19,16 +19,16 @@ _"Invention requires two things: 1. The ability to try a lot of experiments, and
 - A natural catastrophy might take out one availability zone, but probably not one region.
 - Edge locations are endpoints for AWS used for caching content. There are many more edge locations than regions (> 150).
 
-## High level services needed to pass the exam
+## Core services
 
-### Core services
 - Security, identity and compliance (IAM, …)
 - Network and content delivery (Route53, Cloudfront, VPC, …)
 - Compute (EC2, Lambda)
 - Storage (S3)
 - Databases (RDS, DynamoDB, Redshift)
 
-### Auxilliary services
+## Auxilliary services
+
 - Analytics
 - Management and governance
 - Desktop and app streaming

@@ -47,7 +47,7 @@ _Important part of the exam, you need to be able to build VPC from memory_
   - associate subnet with the route table
 - Launch ec2 instances with selecting the vpc under _network_ and the subnet under _subnet_
 
-### Remember
+## Remember
 
 - Security groups can't span VPCs
 - Different security groups do not have access to each other (by default)

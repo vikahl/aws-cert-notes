@@ -10,7 +10,7 @@
   Low cost for frequently accessed, throughput intensive workloads, i.e. big data and data warehouse
 - Cold (HDD). IOPS/volume: 250  
   Lowest cost designed for less frequent access, i.e. file servers
-- EBS magnetic. IOPS/volume: 40-200 
+- EBS magnetic. IOPS/volume: 40-200  
   Previous generation HDD, used where data is infrequently accessed.
 
 ## Key topics
@@ -45,10 +45,9 @@ That AMI can be copied to another region to start a new instance in another regi
 - Volumes restored from encrypted snapshots are encrypted automatically.
 - Snapshots can be shared, but not if they are encrypted.
 
-### Creating an encrypted root volume
+## Creating an encrypted root volume
 
 1. Create a snapshot of the volume
 2. Copy the snapshot and select to encrypt this copy
 3. Create AMI (image) from the snapshot, resulting in an encrypted image
 4. Launch a new instance which will have the root device encrypted.
-
