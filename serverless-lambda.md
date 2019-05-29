@@ -5,15 +5,15 @@ Exam: Know the lambda triggers
 - Scales out (not up) automatically
 - Can be used in multiple ways, for example:
   - as an event-driven compute service where code is ran in response to events like changes of data in S3 buckets or db tables
-  - as a compute service to run code in response to http requests using API gateway or api calls made with AWS SDKs
+  - as a compute service to run code in response to http requests using API gateway or API calls made with AWS SDKs
 - Priced on requests and duration
-  - First 1 million requests are free, then 0.20 usd/1 million requests
-  - Duration is execution time rounded up to nearest 100 ms. Pricing based on the amount of memory used, 0.00001667 USD/(Gb‧s)
+  - First 1 million requests are free, then 0.20 USD/1 million requests
+  - Duration is execution time rounded up to nearest 100 ms. Pricing based on the amount of memory used, 0.00001667 USD/(GB‧s)
 - AWS X-ray allows debugging of what is happening in Lambda
 
 ## Example Serverless website
 
-![Serverless website architecture](serverless-lambda-architecture.png)
+![Serverless website architecture](assets/serverless-lambda-architecture.png)
 
 1. Browser requests IP address from DNS
 2. Browser uses IP address to request (static) page from web server (hosted in S3 bucket)
